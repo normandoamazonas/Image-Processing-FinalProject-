@@ -3,7 +3,7 @@
  
  This is a proposal for the final project, for the Image Enhancement discipline, addressing the deforestation of the Amazon rainforest as a theme.
  
- Student:
+ **Student:**
  
  -Normando de Campos Amazonas Filho ,NUSP: 11561949
  

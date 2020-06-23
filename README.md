@@ -27,6 +27,9 @@ In this project are going to be used two comparative 30 – meter images, of the
 
 The chosen images from NASA were acquired on the website https://earthobservatory.nasa.gov/images/145888/making-sense-of-amazon-deforestation-patterns and it represents a fragment of the Caguán River located in Colombia.
 
+![](LANDSAT2000.png)
+![](LANDSAT2017.png)
+
 **Description of steps to reach the objective**
 
 This type of quantification where pixels are related to measurements is known as photogrammetry. The project has 3 important phases: the first is pre-processing where the aim is to improve the image (eliminating noise through filters). The second phase is to define regions of interest and extract them (segmentation). Finally, the third phase consists of quantify a statistic comparing the established metrics.

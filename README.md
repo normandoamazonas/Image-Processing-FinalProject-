@@ -5,8 +5,8 @@
  
  **Student:**
  
- -Normando de Campos Amazonas Filho ,NUSP: 11561949
- -Robson Pessoa, NUSP 8632563
+ - Normando de Campos Amazonas Filho, NUSP: 11561949
+ - Robson Pessoa, NUSP: 8632563
  
  **Title: Deforestation rates in the Amazon forest through satellite images**
 

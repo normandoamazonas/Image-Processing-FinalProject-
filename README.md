@@ -33,7 +33,56 @@ The project will try to understand which are the applied methods that allow an i
 
 **Description of steps to reach the objective**
 
- This type of quantification where pixels are related to measurements is known as photogrammetry. The project has 3 important phases: the first is pre-processing where the aim is to improve the image (eliminating noise through filters). The second phase is to define regions of interest and extract them (segmentation). Finally, the third phase consists of quantify a statistic comparing the established metrics.
+ This type of quantification where pixels are related to measurements is known as photogrammetry. 
+ The project has 3 important phases: the first is pre-processing where the aim is to improve the image 
+ (eliminating noise through filters). The second phase is to define regions of interest and extract them (segmentation). 
+ Finally, the third phase consists of quantify a statistic comparing the established metrics.
+ 
+ In the phase of pre-processing the main goal is to increase the delimitation of some interested areas in the image 
+ to be used in the phase of segmentation. 
+ The steps used to achieve that are:
+ 1. Increase the contrast of the image by applying an Adaptive Histogram Equalization Filter in each color channel.
+   This method redistribute the color intensity values of the image by applying a function in different regions of the 
+   image in order to saturate each one of them with different coefficients.
+    * Red Channel
+    
+    * Blue Channel
+    
+    * Green Channel
+    
+    * Final Result
+    
+ 2. Increase the sharpness of the image by applying the Laplacian Filter in each color channel. 
+ This method highlight regions of rapid intensity change, improving the visibility of edges.
+    * Red Channel
+    
+    * Blue Channel
+    
+    * Green Channel
+    
+    * Final Result
+ 
+ To the segmentation phase, the aim is to delimit areas such as clouds, rivers, forest and deforested areas to be used 
+ in the last phase of comparison.
+ To do that, some color ranges are going to be used to describe a specific area. The proposal is to apply the Otsu method 
+ to find the global optimum threshold and apply it for each range defined. The specified ranges are:
+  * 100% Forest Area - #color to #color.
+  * 90% Forest Area - #color to #color.
+  * 80% Forest Area - #color to #color.
+  * 70% Forest Area - #color to #color.
+  * 60% Forest Area - #color to #color.
+  * 50% Forest Area - #color to #color.
+  * 40% Forest Area - #color to #color.
+  * 30% Forest Area - #color to #color.
+  * 20% Forest Area - #color to #color.
+  * 10% Forest Area - #color to #color.
+  * 0% Forest Area - #color to #color.
+ 
+ For each range, the segmentation method is applied in the two images. The results are subtracted to find the 
+ difference of forest area between the two acquisitions pixel by pixel. The higher the value in the resulted image, 
+ the bigger is the deforestation.
+ 
+ The output image is a heat map of deforestation. 
 
 
 

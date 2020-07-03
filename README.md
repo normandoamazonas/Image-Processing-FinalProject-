@@ -29,7 +29,10 @@ The project will try to understand which are the applied methods that allow an i
  The chosen images from NASA were acquired on the website https://earthobservatory.nasa.gov/images/145888/making-sense-of-amazon-deforestation-patterns and it represents a fragment of the Caguán River located in Colombia.
 
 ![](LANDSAT2000.png)
+Image 1 - forest area image acquired in 2000.
+
 ![](LANDSAT2017.png)
+Image 2 - forest area image acquired in 2017.
 
 **Description of steps to reach the objective**
 
@@ -45,12 +48,17 @@ The project will try to understand which are the applied methods that allow an i
    This method redistribute the color intensity values of the image by applying a function in different regions of the 
    image in order to saturate each one of them with different coefficients.
     ![](LANDSAT2000_Contrast.png)
+    Image 3 - forest area image acquired in 2000 with higher contrast.
+    
     ![](LANDSAT2017_Contrast.png)
+    Image 4 - forest area image acquired in 2017 with higher contrast.
     
  2. Increase the sharpness of the image by applying the Laplacian Filter in each color channel. 
  This method highlight regions of rapid intensity change, improving the visibility of edges.
     ![](LANDSAT2000_Nitidez.png)
+    Image 5 - forest area image acquired in 2000 with higher sharpness.
     ![](LANDSAT2017_Nitidez.png)
+    Image 6 - forest area image acquired in 2017 with higher sharpness.
  
  To the segmentation phase, the aim is to delimit areas such as clouds, rivers, forest and deforested areas to be used 
  in the last phase of comparison.

@@ -98,11 +98,11 @@ With the new image, it was possible to generate an Otsu filter and this time ret
 
 ![](Otsu2000.png)
 
-![] (Otsu2017.png)
+![](Otsu2017.png)
 
 A subtraction of the Otsu output of 2017 was performed with the Otsu output of 2000 and in this way a visual difference was reached from what would be the deforestation increase from 2000 until 2017 exclusively.
 
-![] (2017-2000.png)
+![](2017-2000.png)
  
  
  Final project for **[SCC0251 - Image Processing](https://uspdigital.usp.br/jupiterweb/jupDisciplina?sgldis=SCC0251)** @ ICMC/USP.

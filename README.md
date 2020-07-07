@@ -82,6 +82,15 @@ _Image 2 - forest area image acquired in 2017._
  
  The output image is a heat map of deforestation.
  
+**Experimentation**
+
+For experimentation with the Otsu method, the original image was used. The method works with gray scale, generating a threshold within the histogram and dividing everything into two very distinct layers.
+In a first experiment, the ineffectiveness of the method in the presence of clouds was noted, since it assumed the highest value pixels as one of the most expressive objects and darkened everything else.
+The solution to this was to cut out an area of ​​interest, taking care not to include significant amounts of clouds. This process was performed in GIMP, which created an alternative layer and hand-cut a mask of the region of interest within the image of the year 2017, excluding the clouds from the new image.
+After that the same mask was applied to the image of the year 2000, which had a new cutout by hand to exclude the clouds that were still inside the mask, only this time from the year 2000.
+With the new image, it was possible to generate an Otsu filter and this time retain significant pixel disparity information with both the 2000 image and the 2017 image.
+A subtraction of the Otsu output of 2017 was performed with the Otsu output of 2000 and in this way a visual difference was reached from what would be the deforestation increase from 2000 until 2017 exclusively.
+ 
  
  Final project for **[SCC0251 - Image Processing](https://uspdigital.usp.br/jupiterweb/jupDisciplina?sgldis=SCC0251)** @ ICMC/USP.
  

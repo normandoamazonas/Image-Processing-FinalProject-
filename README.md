@@ -21,18 +21,23 @@ The project will try to understand which are the applied methods that allow an i
 
 **Description of Input Images**
 
- In this project are going to be used two comparative 30 – meter images, of the year 2000 and 2017, obtained from a NASA LANDSAT satellite, that have a dimension of 2029 x 1427 pixels,  where each pixel represents an area of 0.09 ha or 900m².
+ In this project are going to be used two comparative 30 – meter images, of the year 2000 and 2017, obtained from a NASA LANDSAT satellite, that have a dimension of 2029 x 1427 pixels,  where each pixel represents an area of 0.09 ha or 900m² (almost a baseball field).
 
 ![](Size_by_pixel.png)
-
+_Image 1 - representation of the size oh the pixel._
 
  The chosen images from NASA were acquired on the website https://earthobservatory.nasa.gov/images/145888/making-sense-of-amazon-deforestation-patterns and it represents a fragment of the Caguán River located in Colombia.
 
 ![](LANDSAT2000.png)
-_Image 1 - forest area image acquired in 2000._
+_Image 2 - forest area image acquired in 2000._
 
 ![](LANDSAT2017.png)
-_Image 2 - forest area image acquired in 2017._
+_Image 3 - forest area image acquired in 2017._
+
+The real area is located at the coordinates 1.131384, -74.546652, and is full of cities that are constantly expanding, which explains the deforestation of the area.
+
+![](GoogleMap.png)
+_Image 4 - image from Google Maps in 2020._
 
 **Description of steps to reach the objective**
 
@@ -48,17 +53,17 @@ _Image 2 - forest area image acquired in 2017._
    This method redistribute the color intensity values of the image by applying a function in different regions of the 
    image in order to saturate each one of them with different coefficients.
     ![](LANDSAT2000_Contrast.png)
-    _Image 3 - forest area image acquired in 2000 with higher contrast._
+    _Image 5 - forest area image acquired in 2000 with higher contrast._
     
     ![](LANDSAT2017_Contrast.png)
-    _Image 4 - forest area image acquired in 2017 with higher contrast._
+    _Image 6 - forest area image acquired in 2017 with higher contrast._
     
  2. Increase the sharpness of the image by applying the Laplacian Filter in each color channel. 
  This method highlight regions of rapid intensity change, improving the visibility of edges.
     ![](LANDSAT2000_Nitidez.png)
-    _Image 5 - forest area image acquired in 2000 with higher sharpness._
+    _Image 7 - forest area image acquired in 2000 with higher sharpness._
     ![](LANDSAT2017_Nitidez.png)
-    _Image 6 - forest area image acquired in 2017 with higher sharpness._
+    _Image 8 - forest area image acquired in 2017 with higher sharpness._
  
  To the segmentation phase, the aim is to delimit areas such as clouds, rivers, forest and deforested areas to be used 
  in the last phase of comparison.
@@ -88,21 +93,26 @@ For experimentation with the Otsu method, the original image was used. The metho
 In a first experiment, the ineffectiveness of the method in the presence of clouds was noted, since it assumed the highest value pixels as one of the most expressive objects and darkened everything else.
 
 ![](OtsuFail.png)
+  _Image 9 - Otsu method in an image with clouds._
 
 The solution to this was to cut out an area of interest, taking care not to include significant amounts of clouds. This process was performed in GIMP, which created an alternative layer and hand-cut a mask of the region of interest within the image of the year 2017, excluding the clouds from the new image.
 After that the same mask was applied to the image of the year 2000, which had a new cutout by hand to exclude the clouds that were still inside the mask.
 
 ![](ImageMask.png)
+  _Image 10 - image mask._
 
 With the new image, it was possible to generate an Otsu filter and this time retain significant pixel disparity information with both the 2000 image and the 2017 image.
 
 ![](Otsu2000.png)
+  _Image 11 - Otsu method in the ROI of the year 2000._
 
 ![](Otsu2017.png)
+  _Image 12 - Otsu method in the ROI of the year 2017._
 
 A subtraction of the Otsu output of 2017 was performed with the Otsu output of 2000 and in this way a visual difference was reached from what would be the deforestation increase from 2000 until 2017 exclusively.
 
 ![](2017-2000.png)
+  _Image 13 - Subtraction of the both images (2017-2000)._
  
  
  Final project for **[SCC0251 - Image Processing](https://uspdigital.usp.br/jupiterweb/jupDisciplina?sgldis=SCC0251)** @ ICMC/USP.

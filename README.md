@@ -25,7 +25,7 @@ The project will try to understand which are the applied methods that allow an i
 
 ![](Size_by_pixel.png)
 
-_Image 1 - representation of the size oh the pixel._
+_Image 1 - representation of the size of the pixel._
 
  The chosen images from NASA were acquired on the website https://earthobservatory.nasa.gov/images/145888/making-sense-of-amazon-deforestation-patterns and it represents a fragment of the Caguán River located in Colombia.
 

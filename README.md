@@ -1,7 +1,7 @@
-# Proposal for the Final Project
+# Final Project
 ## Title: Deforestation rates in the Amazon forest through satellite images
  
- This is a proposal for the final project, for the Image Enhancement discipline, addressing the deforestation of the Amazon rainforest as a theme.
+ This is a final project, for the Image Enhancement discipline, addressing the deforestation of the Amazon rainforest as a theme.
  
  **Student:**
  

@@ -1,4 +1,4 @@
-# Final Project
+# Final Report
 ## Title: Deforestation rates in the Amazon forest through satellite images
  
  This is a final project, for the Image Enhancement discipline, addressing the deforestation of the Amazon rainforest as a theme.
